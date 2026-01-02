@@ -27,7 +27,7 @@ January 1st, 2026 */
     justify-content: center;
     background: rgba(255, 255, 255, 0.9);
     padding: 0.75rem 1.5rem;
-    border-radius: 999px;
+    /* border-radius: 999px; */
     position: fixed;
     top: 1rem;
     left: 50%;
