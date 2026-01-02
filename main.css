@@ -22,7 +22,27 @@ January 1st, 2026 */
     padding: 0;
   } */
 
-  .site-header {
+  nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  nav .nav-link {
+    margin: 0 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+
+  /* .site-header {
     position: absolute;
     top: 0;
     width: 100%;
@@ -44,7 +64,7 @@ January 1st, 2026 */
     list-style: none;
     margin: 0;
     padding: 0;
-  }
+  } */
   /* .navbar-nav {
     margin: 0 auto;
   }

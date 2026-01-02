@@ -49,7 +49,7 @@ January 1st, 2026 */
     font-size: 1.25rem;
 }
 
-.hero .navbar {
+/* .hero .navbar {
     position: absolute;
     top: 2rem;
     left: 50%;
@@ -71,4 +71,4 @@ January 1st, 2026 */
 
 .hero .nav-link:hover {
     text-decoration: underline;
-}
+} */
