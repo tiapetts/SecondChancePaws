@@ -8,3 +8,18 @@ January 1st, 2026 */
     height: auto;
     border-radius: 12px;
 }
+
+.hero {
+    height: 80vh;
+    background-image: url('img/pexels-lum3n-44775-406014.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* padding: 60px 20px; */
+    /* color: white;
+    text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
