@@ -43,11 +43,21 @@ January 1st, 2026 */
   
 
   .site-header {
-    position: absolute;
+    position: relative;
+    padding-top: 6rem; /* space for fixed nav */
     top: 0;
     width: 100%;
     z-index: 10;
   }
+
+  .site-header > .navbar {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
 
   .site-nav {
     max-width: 900px;
