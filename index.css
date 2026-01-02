@@ -62,3 +62,12 @@ January 1st, 2026 */
     display: flex;
     gap: 1rem;
 }
+
+.hero .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.hero .nav-link:hover {
+    text-decoration: underline;
+}
