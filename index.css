@@ -30,3 +30,11 @@ January 1st, 2026 */
     inset: 0;
     background: rgba(0, 0, 0, 0.35); /*soft overlay*/
 }
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 1rem;
+}
