@@ -22,6 +22,7 @@ January 1st, 2026 */
     align-items: center;
     justify-content: center;
     position: relative;
+    color: white;
 }
 
 .hero::before {
