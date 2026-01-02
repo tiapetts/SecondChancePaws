@@ -51,7 +51,7 @@ January 1st, 2026 */
 }
 
 .hero .navbar {
-    position: absolute;
+    /* position: absolute; */
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);   
