@@ -21,19 +21,19 @@ January 1st, 2026 */
     list-style-type: none;
     padding: 0;
   } */
-
+/* 
   nav {
     display: flex;
     justify-content: center;
     background: rgba(255, 255, 255, 0.9);
     padding: 0.75rem 1.5rem;
-    /* border-radius: 999px; */
+    border-radius: 999px;
     position: fixed;
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-  }
+  } */
   
   nav .nav-link {
     margin: 0 1rem;
@@ -108,11 +108,11 @@ January 1st, 2026 */
   
 /* Main Styles */
 
-main {
+/* main {
   padding-top: 90px;
 }
-  
+   */
 body {
     background-color: #c5d86d;
-    padding-top: 90px;
+    /* padding-top: 90px; */
 }
