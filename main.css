@@ -65,9 +65,11 @@ January 1st, 2026 */
     margin: 0;
     padding: 0;
   }
-  /* .navbar-nav {
+
+  .navbar-nav {
     margin: 0 auto;
   }
+  /* 
 
   .hero .navbar {
     position: absolute;
