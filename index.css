@@ -23,3 +23,10 @@ January 1st, 2026 */
     justify-content: center;
     position: relative;
 }
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35); /*soft overlay*/
+}
