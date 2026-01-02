@@ -11,6 +11,7 @@ January 1st, 2026 */
   nav ul {
     list-style-type: none;
     padding: 0;
+    align-items: center;
   }
 
   
