@@ -21,7 +21,7 @@ January 1st, 2026 */
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
     color: white;
 }
 
