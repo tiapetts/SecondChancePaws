@@ -80,6 +80,11 @@ January 1st, 2026 */
     margin: 0 auto;
     align-items: center;
   }
+
+  .full-width-nav {
+    width: 100%;
+    background-color: white;
+  }
   /* 
 
   .hero .navbar {
