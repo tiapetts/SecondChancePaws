@@ -29,6 +29,14 @@ January 1st, 2026 */
     z-index: 10;
   }
 
+  .site-nav {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    background: rgba (255, 255, 255, 0.9);
+    border-radius: 999px;
+    padding: 0.75rem 2rem;
+  }
+
   /* .navbar-nav {
     margin: 0 auto;
   }
