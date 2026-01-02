@@ -5,4 +5,6 @@ January 1st, 2026 */
     width: 80%;
     display: block;
     margin: auto;
+    height: auto;
+    border-radius: 12px;
 }
