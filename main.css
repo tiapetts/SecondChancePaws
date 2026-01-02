@@ -96,6 +96,11 @@ January 1st, 2026 */
     text-decoration: underline;
 } */
   
+/* Main Styles */
+
+main {
+  padding-top: 90px;
+}
   
 body {
     background-color: #c5d86d;
