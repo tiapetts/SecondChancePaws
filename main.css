@@ -1,9 +1,17 @@
 /* Tia Belliveau
 January 1st, 2026 */
 
-
+/* mobile friendly */
 @media (max-width: 600px) {
     body {
+      font-size: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 1rem;
+    }
+
+    .hero p {
       font-size: 1rem;
     }
   }
