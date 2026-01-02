@@ -8,6 +8,11 @@ January 1st, 2026 */
     }
   }
 
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
   
 body {
     background-color: #c5d86d;
