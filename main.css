@@ -24,6 +24,30 @@ January 1st, 2026 */
   .navbar-nav {
     margin: 0 auto;
   }
+
+  .hero .navbar {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);   
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+}
+
+.hero .navbar-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.hero .nav-link:hover {
+    text-decoration: underline;
+}
   
   
 body {
