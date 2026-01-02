@@ -10,7 +10,7 @@ January 1st, 2026 */
 }
 
 .hero {
-    height: 80vh;
+    min-height: 60vh;
     background-image: url('img/pexels-lum3n-44775-406014.jpg');
     background-size: cover;
     background-position: center;
@@ -23,6 +23,7 @@ January 1st, 2026 */
     justify-content: center;
     /* position: relative; */
     color: white;
+    margin-bottom: 4rem;
 }
 
 .hero::before {
