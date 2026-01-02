@@ -53,7 +53,7 @@ January 1st, 2026 */
     max-width: 900px;
     margin: 1.5rem auto;
     background: rgba (255, 255, 255, 0.9);
-    border-radius: 999px;
+    /* border-radius: 999px; */
     padding: 0.75rem 2rem;
   }
 
