@@ -34,7 +34,7 @@ January 1st, 2026 */
 }
 
 .hero-content {
-    position: relative;
+    /* position: relative; */
     text-align: center;
     color: white;
     max-width: 800px;
