@@ -16,12 +16,20 @@ January 1st, 2026 */
     }
   }
 
+  /* Navigation styles */
   nav ul {
     list-style-type: none;
     padding: 0;
   }
 
-  .navbar-nav {
+  .site-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* .navbar-nav {
     margin: 0 auto;
   }
 
@@ -47,7 +55,7 @@ January 1st, 2026 */
 
 .hero .nav-link:hover {
     text-decoration: underline;
-}
+} */
   
   
 body {
