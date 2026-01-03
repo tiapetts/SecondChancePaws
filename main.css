@@ -49,8 +49,8 @@ January 1st, 2026 */
     width: 100%;
     z-index: 10;
   }
-/* 
-  .site-header > .navbar {
+
+  /* .site-header > .navbar {
     position: absolute;
     top: 2rem;
     left: 50%;
