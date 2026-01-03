@@ -10,5 +10,6 @@ A fake adoption website that showcases my development skills
 <br />
 
 <h2>Second Chance Paws ERD</h2>
-<img width="1281" height="701" alt="image" src="https://github.com/user-attachments/assets/20ffbf53-9b59-47d3-a894-470950bcd75c" />
+<img width="1061" height="529" alt="image" src="https://github.com/user-attachments/assets/3c2fc45b-3027-40f1-b8b8-891e6c429645" />
+
 
