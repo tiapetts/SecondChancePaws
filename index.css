@@ -94,3 +94,9 @@ January 1st, 2026 */
     height: auto;
     border-radius: 6px;
 }
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
