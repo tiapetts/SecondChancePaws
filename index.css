@@ -71,4 +71,26 @@ January 1st, 2026 */
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 4rem;
+    
+}
+
+/* Card Styles */
+.friends {
+    border: 1px solid #333;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.friendsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem
+}
+
+.doggo {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
