@@ -30,3 +30,52 @@ section {
     width: 80%;
     margin: 0 auto 4rem auto;
 }
+
+.technical-details {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+details {
+    background: rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+summary {
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+summary::after {
+    content: " ▼";
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.details-content h3 {
+    margin-top: 1.5rem;
+}
+
+.details-content ul {
+    padding-left: 1.25rem;
+}
+
+.schema-image {
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.15);
+}
