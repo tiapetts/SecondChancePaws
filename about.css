@@ -7,6 +7,18 @@ January 1st, 2026 */
     padding: 2rem;
 }
 
+.about-section h2 {
+    letter-spacing: 0.5px;
+}
+
+.about-section p {
+    line-height: 1.7;
+}
+
+.about-section ul li {
+    margin-bottom: 0.75rem;
+  }
+
 .about-section-values {
     background: rgba(255,255,255,0.15);
     border-left: 6px solid #2f5233;
