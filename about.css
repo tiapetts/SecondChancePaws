@@ -24,3 +24,9 @@ January 1st, 2026 */
     border-left: 6px solid #2f5233;
     border-radius: 12px;
 }
+
+section {
+    display: block;
+    width: 80%;
+    margin: 0 auto 4rem auto;
+}
