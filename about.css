@@ -1,2 +1,14 @@
 /* Tia Belliveau
 January 1st, 2026 */
+
+.about-section {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.about-section-values {
+    background: rgba(255,255,255,0.15);
+    border-left: 6px solid #2f5233;
+    border-radius: 12px;
+}
