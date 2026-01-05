@@ -22,3 +22,13 @@ const db = new sqlite3.Database(
         }  
     } 
 );
+
+// test route
+app.get('/', (req, res) => {
+    res.json({ message: 'Welcome to the Second Chance Paws API!' });
+});
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
