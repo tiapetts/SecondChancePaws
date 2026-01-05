@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("adoption-form"); 
 
 
-    form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", async function(event) {
         // Prevent form submission if validation fails
         if (!isValid) {
             event.preventDefault(); 
