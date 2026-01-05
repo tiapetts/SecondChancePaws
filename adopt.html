@@ -55,20 +55,58 @@
 
             <h2>Available for Adoption</h2>
 
-            <article>
-                <h3>Charlie</h3>
-                <p>Friendly, loves to play, great with kids.</p>
-            </article>
+            <form class="adoption-form" method="post">
+                <h2>Adoption Application</h2>
 
-            <article>
-                <h3>Daisy</h3>
-                <p>Sweet, calm, enjoys quiet walks and cuddles.</p>
-            </article>
+                <!-- adopter information -->
+                <fieldset>
+                    <legend>Adopter Information</legend>
 
-            <article>
-                <h3>Rocky</h3>
-                <p>Energetic, adventurous, perfect for an active family.</p>
-            </article>
+                    <label for="full-name">
+                        Full Name:
+                        <input type="text" id="full-name" name="full-name" required />
+                    </label>
+
+
+                    <label for="email">
+                        Email Address:
+                        <input type="email" id="email" name="email" required />
+                    </label>
+
+
+                    <label for="phone">
+                        Phone Number:
+                        <input type="tel" id="phone" name="phone" required />
+                    </label>
+
+
+                    <label>
+                        Street Address
+                        <input type="text" name="home_address" />
+                    </label>
+
+                    <div class="form-row">
+                        <label>
+                            City
+                            <input type="text" name="city" />
+                        </label>
+
+                        <label>
+                            State
+                            <input type="text" name="state" />
+                        </label>
+
+                        <label>
+                            ZIP
+                            <input type="text" name="zip_code" />
+                        </label>
+                </fieldset>
+
+                <!-- animal -->
+                <input type="hidden" name="animal_id" value="3" />
+
+                <button type="submit">Submit Application</button>
+            </form>
 
         </section>
 
