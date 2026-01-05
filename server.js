@@ -60,9 +60,9 @@ app.post('/api/adoptions', (req, res) => {
     // insert adopter info
 
     const insertAdopter = 
-        'INSERT INTO adopters (name, email, phone_number) VALUES (?, ?, ?)';
+        'INSERT INTO adopters (name, email, phone_number, home_address, city, state, zip_code) VALUES (?, ?, ?, ?, ?, ?, ?)';
 
-    db.run(insertAdopter, [name, email, phone_number || null], function(err) {
+    db.run(insertAdopter, [name, email, phone_number, home_address || null, city || null, state || null, zip_code || null], function(err) {
         if (err) {
             console.error('Error inserting adopter:', err.message);
             return res.status(500).json({ error: 'Database error.' });
@@ -86,7 +86,7 @@ app.post('/api/adoptions', (req, res) => {
                 WHERE id = ?`,
                [animal_id] );
 
-               res.json({ success: true, adopter_id: adopterId, adoption_id: this.lastID});
+               res.json({ message: 'Adoption application submitted successfully!', adopter_id: adopterId, adoption_id: this.lastID});
         });
     });
 });
