@@ -91,6 +91,8 @@ app.post('/api/adoptions', (req, res) => {
     });
 });
 
+console.log('DB PATH:', path.join(__dirname, 'second_chance_paws.db'));
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
