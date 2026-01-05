@@ -55,7 +55,7 @@
 
             <h2>Available for Adoption</h2>
 
-            <form action="/adoptions" class="adoption-form" method="post">
+            <form id="adoption-form" action="/adoptions" class="adoption-form" method="post">
                 <h2>Adoption Application</h2>
 
                 <!-- adopter information -->
@@ -64,7 +64,7 @@
 
                     <label for="full-name">
                         Full Name:
-                        <input type="text" id="full-name" name="full-name" required />
+                        <input type="text" id="name" name="name" required />
                         <span class="error"></span>
                     </label>
 
@@ -85,26 +85,26 @@
 
                     <label>
                         Street Address
-                        <input type="text" name="home_address" />
+                        <input type="text" id="home_address" name="home_address" />
                         <span class="error"></span>
                     </label>
 
                     <div class="form-row">
                         <label>
                             City
-                            <input type="text" name="city" />
+                            <input type="text" id="city" name="city" />
                             <span class="error"></span>
                         </label>
 
                         <label>
                             State
-                            <input type="text" name="state" />
+                            <input type="text" id="state" name="state" />
                             <span class="error"></span>
                         </label>
 
                         <label>
                             ZIP
-                            <input type="text" name="zip_code" />
+                            <input type="text" id="zip_code" name="zip_code" />
                             <span class="error"></span>
 
                         </label>
@@ -112,11 +112,11 @@
                     <!-- animal selection -->
                     <div class="form-group">
                         <label for="animal">Which animal are you interested in adopting?</label>
-                        <select id="animal" name="animal" required>
+                        <select id="animal" name="animal_id" required>
                             <option value="">Select an animal</option>
-                            <option value="luna">Luna (dog)</option>
-                            <option value="max">Max (dog)</option>
-                            <option value="bella">Bella (cat)</option>
+                            <option value="1">Luna</option>
+                            <option value="2">Max</option>
+                            <option value="3">Bella</option>
                         </select>
                     </div>
                 </fieldset>
