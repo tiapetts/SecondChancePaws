@@ -7,28 +7,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     form.addEventListener("submit", async function(event) {
-        // Prevent form submission if validation fails
-        if (!isValid) {
-            event.preventDefault(); 
-        }
+        // Prevent default first 
+        event.preventDefault();
+
         // Clear previous error messages
-        const errorElements = document.querySelectorAll(".error-message");
-        errorElements.forEach(el => el.remove());   
+        document.querySelectorAll(".error-message").forEach(el => el.remove());
+
         let isValid = true;
+
+
         // Validate Name
         const nameInput = document.getElementById("name");      
         if (nameInput.value.trim() === "") {
             displayError(nameInput, "Please enter your name.");
             isValid = false;
         }
+
         // Validate Email
         const emailInput = document.getElementById("email");
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailInput.value.match(emailPattern)) {
+        if (!emailPattern.test(emailInput.value)) {
             displayError(emailInput, "Please enter a valid email address.");
             isValid = false;
-
         }
+        
         // Validate Phone Number
         const phoneInput = document.getElementById("phone");
         const phonePattern = /^\d{10}$/; // Simple pattern for 10 digit numbers
