@@ -76,5 +76,21 @@ Second Chance Paws*/
   .form-status.error {
     color: #e63946;
   }
+
+  /* dropdown styles */
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+  }
+
+  .select:focus {
+    outline: none;
+    border-color: #16697A;
+  }
+
   
   
