@@ -11,6 +11,11 @@ const e = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // database connection
 const db = new sqlite3.Database(
     path.join(__dirname, 'second_chance_paws.db'),
