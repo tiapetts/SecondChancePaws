@@ -30,14 +30,16 @@ document.addEventListener("DOMContentLoaded", function() {
             displayError(emailInput, "Please enter a valid email address.");
             isValid = false;
         }
-        
+
         // Validate Phone Number
         const phoneInput = document.getElementById("phone");
-        const phonePattern = /^\d{10}$/; // Simple pattern for 10 digit numbers
-        if (phoneInput.value && !phoneInput.value.match(phonePattern)) {
+        const phonePattern = /^\d{10}$/; 
+        if (phoneInput.value && !phonePattern.test(phoneInput.value)) {
             displayError(phoneInput, "Please enter a valid 10-digit phone number.");
             isValid = false;
         }
+
+        
         // Validate Animal Selection
         const animalSelect = document.getElementById("animal");
         if (animalSelect.value === "") {
