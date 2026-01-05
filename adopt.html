@@ -65,40 +65,48 @@
                     <label for="full-name">
                         Full Name:
                         <input type="text" id="full-name" name="full-name" required />
+                        <span class="error"></span>
                     </label>
 
 
                     <label for="email">
                         Email Address:
                         <input type="email" id="email" name="email" required />
+                        <span class="error"></span>
                     </label>
 
 
                     <label for="phone">
                         Phone Number:
                         <input type="tel" id="phone" name="phone" required />
+                        <span class="error"></span>
                     </label>
 
 
                     <label>
                         Street Address
                         <input type="text" name="home_address" />
+                        <span class="error"></span>
                     </label>
 
                     <div class="form-row">
                         <label>
                             City
                             <input type="text" name="city" />
+                            <span class="error"></span>
                         </label>
 
                         <label>
                             State
                             <input type="text" name="state" />
+                            <span class="error"></span>
                         </label>
 
                         <label>
                             ZIP
                             <input type="text" name="zip_code" />
+                            <span class="error"></span>
+
                         </label>
                     </div>
                 </fieldset>
@@ -107,6 +115,7 @@
                 <input type="hidden" name="animal_id" value="3" />
 
                 <button type="submit">Submit Application</button>
+                <p class="form-status"></p>
             </form>
 
         </section>
