@@ -11,7 +11,7 @@ January 1st, 2026 */
 
 .hero {
     min-height: 60vh;
-    background-image: url('img/pexels-lum3n-44775-406014.jpg');
+    background-image: url('/public/img/pexels-lum3n-44775-406014.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
