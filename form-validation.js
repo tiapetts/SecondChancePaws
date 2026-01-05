@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     form.addEventListener("submit", function(event) {
+        // Prevent form submission if validation fails
+        if (!isValid) {
+            event.preventDefault(); 
+        }
         // Clear previous error messages
         const errorElements = document.querySelectorAll(".error-message");
         errorElements.forEach(el => el.remove());   
@@ -19,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         // Validate Email
         const emailInput = document.getElementById("email");
-        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailInput.value.match(emailPattern)) {
             displayError(emailInput, "Please enter a valid email address.");
             isValid = false;
@@ -28,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Validate Phone Number
         const phoneInput = document.getElementById("phone");
         const phonePattern = /^\d{10}$/; // Simple pattern for 10 digit numbers
-        if (!phoneInput.value.match(phonePattern)) {
+        if (phoneInput.value && !phoneInput.value.match(phonePattern)) {
             displayError(phoneInput, "Please enter a valid 10-digit phone number.");
             isValid = false;
         }
@@ -38,9 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             displayError(animalSelect, "Please select an animal.");
             isValid = false;
         }       
-        if (!isValid) {
-            event.preventDefault(); // Prevent form submission if validation fails
-        }
+        
     });
     // Function to display error messages
     function displayError(inputElement, message) {
