@@ -6,7 +6,7 @@ const express = require('express');
 const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
-const e = require('express');
+// const e = require('express');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -34,17 +34,34 @@ app.get('/', (req, res) => {
 });
 
 // adoption endpoint
-app.post('/adopt', (req, res) => {
-    const { name, email, phone, animal_id } = req.body;
+app.post('/api/adoptions', (req, res) => {
+    const { name, email, phone_number, animal_id } = req.body;
 
-    if (!name || !email || !phone || !animal_id) {
+    if (!name || !email || !phone_number || !animal_id) {
         return res.status(400).json({ error: 'All fields are required.' });
     }
 
-    const insertAdopter = 
-        'INSERT INTO adopters (name, email, phone, animal_id) VALUES (?, ?, ?, ?)';
+    // check if animal is available for adoption
+    db.get(
+        'SELECT status FROM animals WHERE id = ?',
+        [animal_id],
+        (err, animal) => {
+            if (err) {
+                return res.status(500).json({ error: err.message });
+            }
 
-    db.run(insertAdopter, [name, email, phone, animal_id], function(err) {
+            if (animal && animal.status !== 'available') {
+                return res.status(400).json({ error: 'Animal is not available for adoption.' });
+            }
+
+        });
+
+    // insert adopter info
+
+    const insertAdopter = 
+        'INSERT INTO adopters (name, email, phone_number) VALUES (?, ?, ?)';
+
+    db.run(insertAdopter, [name, email, phone_number || null], function(err) {
         if (err) {
             console.error('Error inserting adopter:', err.message);
             return res.status(500).json({ error: 'Database error.' });
@@ -68,7 +85,7 @@ app.post('/adopt', (req, res) => {
                 WHERE id = ?`,
                [animal_id] );
 
-               res.json({ message: 'Adoption successful!', adopterId, adoptionId: this.lastID });
+               res.json({ success: true, adopter_id: adopterId, adoption_id: this.lastID});
         });
     });
 });
