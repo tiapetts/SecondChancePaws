@@ -41,7 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
         if (animalSelect.value === "") {
             displayError(animalSelect, "Please select an animal.");
             isValid = false;
-        }       
+        }
+        
+        // If all validations pass, allow form submission
+        if (isValid) {
+            alert("Application submitted successfully!");
+            form.reset();
+        }
         
     });
     // Function to display error messages
