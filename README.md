@@ -1,6 +1,6 @@
 # SecondChancePaws
 <h1>Take a look</h1>
-<li><a href="https://tiapetts.github.io/SecondChancePaws/public/html/index.html">Second Chance Paws Website</a></li>
+<li><a href="https://tiapetts.github.io/SecondChancePaws/public/html">Second Chance Paws Website</a></li>
 
 <br />
 A fake adoption website that showcases my development skills
