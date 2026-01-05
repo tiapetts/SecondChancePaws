@@ -1,2 +1,54 @@
 /* Tia Belliveau
-January 1st, 2026 */
+January 1st, 2026 
+Second Chance Paws*/
+
+.adoption-form {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+
+  .adoption-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .adoption-form fieldset {
+    border: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  .adoption-form label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .adoption-form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;   
+    background-color: #16697A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  
