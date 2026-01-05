@@ -52,6 +52,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Ready for backend submission
         alert("Application submitted successfully!");
+
+        try {
+            const response = await fetch("/api/adoptions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: nameInput.value.trim(),
+                    email: emailInput.value.trim(),
+                    phone_number: phoneInput.value.trim(),
+                    animal_id: animalSelect.value
+                })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert(result.message);
+            } else {
+                alert("Error: " + result.error);
+            }
+        } catch (error) {
+            alert("An unexpected error occurred. Please try again later.");
+            console.error("Error submitting form:", error);
+        }
+        
         form.reset();
         // If all validations pass, allow form submission
         // if (isValid) {
