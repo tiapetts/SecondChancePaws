@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
         }
 
-        
+
         // Validate Animal Selection
         const animalSelect = document.getElementById("animal");
         if (animalSelect.value === "") {
@@ -47,11 +47,17 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
         }
         
+        // Stop here if validation failed
+        if (!isValid) return;
+
+        // Ready for backend submission
+        alert("Application submitted successfully!");
+        form.reset();
         // If all validations pass, allow form submission
-        if (isValid) {
-            alert("Application submitted successfully!");
-            form.reset();
-        }
+        // if (isValid) {
+        //     alert("Application submitted successfully!");
+        //     form.reset();
+        // }
         
     });
     // Function to display error messages
@@ -60,6 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
         errorElement.className = "error-message";
         errorElement.style.color = "red";
         errorElement.textContent = message;
-        inputElement.parentNode.insertBefore(errorElement, inputElement.nextSibling);
+        inputElement.insertAdjacentElement("afterend", errorElement);
     }
 });
