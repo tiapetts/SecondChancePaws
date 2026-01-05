@@ -51,4 +51,30 @@ Second Chance Paws*/
     font-size: 1.25rem;
     cursor: pointer;
   }
+
+  /* Form Success and Error State Styles */
+  input.error-input {
+    border-color: #e63946;
+  }
+  
+  .error {
+    display: block;
+    color: #e63946;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+  
+  .form-status {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  
+  .form-status.success {
+    color: #2a9d8f;
+  }
+  
+  .form-status.error {
+    color: #e63946;
+  }
+  
   
