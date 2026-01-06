@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 });
 
 // adoption endpoint
-app.post('/api/adoptions', (req, res) => {
+app.post('/adopt', (req, res) => {
     const { name, email, phone_number, home_address, city, state, zip_code, animal_id } = req.body;
 
     if (!name || !email || !phone_number || !home_address || !city || !state || !zip_code || !animal_id) {
