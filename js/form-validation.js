@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function() {
             name,
             email,
             phone,
-            address: document.getElementById("street-address"),
+            address: document.getElementById("home_address"),
             city: document.getElementById("city"),
             state: document.getElementById("state"),
-            zip: document.getElementById("zip"),
+            zip: document.getElementById("zip_code"),
             animal
           });
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     address: document.getElementById("home_address").value,
                     city: document.getElementById("city").value,
                     state: document.getElementById("state").value,
-                    zip: document.getElementById("zip").value,
+                    zip: document.getElementById("zip_code").value,
                     animal_id: animal.value
                 })
             });
