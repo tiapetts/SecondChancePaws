@@ -64,36 +64,49 @@ document.addEventListener("DOMContentLoaded", function() {
             animal
           });
 
-        try {
-            const response = await fetch("/api/adoptions", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    // 
-                    name: name.value,
-                    email: email.value,
-                    phone: phone.value,
-                    address: document.getElementById("home_address").value,
-                    city: document.getElementById("city").value,
-                    state: document.getElementById("state").value,
-                    zip: document.getElementById("zip_code").value,
-                    animal_id: animal.value
-                })
-            });
+          const payload = {
+            name: document.getElementById("name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            address: document.getElementById("home_address").value.trim(),
+            city: document.getElementById("city").value.trim(),
+            state: document.getElementById("state").value.trim(),
+            zip: document.getElementById("zip_code").value.trim(),
+            animal_id: document.getElementById("animal").value
+          };
+          
+          console.log("Submitting payload:", payload);
 
-            const result = await response.json();
+        // try {
+        //     const response = await fetch("/api/adoptions", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify({
+        //             // 
+        //             name: name.value,
+        //             email: email.value,
+        //             phone: phone.value,
+        //             address: document.getElementById("home_address").value,
+        //             city: document.getElementById("city").value,
+        //             state: document.getElementById("state").value,
+        //             zip: document.getElementById("zip_code").value,
+        //             animal_id: animal.value
+        //         })
+        //     });
 
-            if (response.ok) {
-                alert(result.message);
-            } else {
-                alert("Error: " + result.error);
-            }
-        } catch (error) {
-            alert("An unexpected error occurred. Please try again later.");
-            console.error("Error submitting form:", error);
-        }
+        //     const result = await response.json();
+
+        //     if (response.ok) {
+        //         alert(result.message);
+        //     } else {
+        //         alert("Error: " + result.error);
+        //     }
+        // } catch (error) {
+        //     alert("An unexpected error occurred. Please try again later.");
+        //     console.error("Error submitting form:", error);
+        // }
 
         form.reset();
         // If all validations pass, allow form submission
