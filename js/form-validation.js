@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
           });
 
         try {
-            const response = await fetch("/adopt", {
+            const response = await fetch("/api/adoptions", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
