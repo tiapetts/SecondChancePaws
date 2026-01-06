@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Validate Phone Number
         const phoneInput = document.getElementById("phone");
         const phonePattern = /^\d{10}$/; 
-        if (phoneInput.value && !phonePattern.test(phoneInput.value)) {
+        if (!phone.value.match(phonePattern)) {
             displayError(phoneInput, "Please enter a valid 10-digit phone number.");
             isValid = false;
         }
