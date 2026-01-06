@@ -60,10 +60,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    name: nameInput.value.trim(),
-                    email: emailInput.value.trim(),
-                    phone_number: phoneInput.value.trim(),
-                    animal_id: animalSelect.value
+                    // 
+                    name: name.value,
+                    email: email.value,
+                    phone: phone.value,
+                    address: document.getElementById("address").value,
+                    city: document.getElementById("city").value,
+                    state: document.getElementById("state").value,
+                    zip: document.getElementById("zip").value,
+                    animal_id: animal.value
                 })
             });
 
@@ -78,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("An unexpected error occurred. Please try again later.");
             console.error("Error submitting form:", error);
         }
-        
+
         form.reset();
         // If all validations pass, allow form submission
         // if (isValid) {
