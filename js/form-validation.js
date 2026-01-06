@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     name: name.value,
                     email: email.value,
                     phone: phone.value,
-                    address: document.getElementById("address").value,
+                    address: document.getElementById("home_address").value,
                     city: document.getElementById("city").value,
                     state: document.getElementById("state").value,
                     zip: document.getElementById("zip").value,
