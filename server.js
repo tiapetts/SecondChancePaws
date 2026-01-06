@@ -39,15 +39,15 @@ app.post('/api/adoptions', (req, res) => {
     const {
       name,
       email,
-      phone,
-      address,
+      phone_number,
+      home_address,
       city,
       state,
-      zip,
+      zip_code,
       animal_id
     } = req.body;
   
-    if (!name || !email || !phone || !address || !city || !state || !zip || !animal_id) {
+    if (!name || !email || !phone_number || !home_address || !city || !state || !zip_code || !animal_id) {
       return res.status(400).json({ error: 'All fields are required.' });
     }
   
@@ -74,7 +74,7 @@ app.post('/api/adoptions', (req, res) => {
   
         db.run(
           insertAdopter,
-          [name, email, phone, address, city, state, zip],
+          [name, email, phone_number, home_address, city, state, zip_code],
           function (err) {
             if (err) {
               console.error(err);
