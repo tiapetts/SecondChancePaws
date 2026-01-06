@@ -28,6 +28,9 @@ const db = new sqlite3.Database(
     } 
 );
 
+console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'second_chance_paws.db'));
+
+
 // test route
 app.get('/', (req, res) => {
 
