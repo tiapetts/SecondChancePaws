@@ -53,6 +53,17 @@ document.addEventListener("DOMContentLoaded", function() {
         // Ready for backend submission
         alert("Application submitted successfully!");
 
+        console.log({
+            name,
+            email,
+            phone,
+            address: document.getElementById("street-address"),
+            city: document.getElementById("city"),
+            state: document.getElementById("state"),
+            zip: document.getElementById("zip"),
+            animal
+          });
+
         try {
             const response = await fetch("/api/adoptions", {
                 method: "POST",
