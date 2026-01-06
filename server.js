@@ -31,14 +31,28 @@ const db = new sqlite3.Database(
 
 // test route
 app.get('/', (req, res) => {
+
+    console.log('Incoming adoption request');
+
+    const {
+        name,
+        email,
+        phone_number,
+        address,
+        city,
+        state,
+        zip_code,
+        animal_id   
+    } = req.body;
+
     res.json({ message: 'Welcome to the Second Chance Paws API!' });
 });
 
 // adoption endpoint
 app.post('/api/adoptions', (req, res) => {
-    const { name, email, phone_number, animal_id } = req.body;
+    const { name, email, phone_number, home_address, city, state, zip_code, animal_id } = req.body;
 
-    if (!name || !email || !phone_number || !animal_id) {
+    if (!name || !email || !phone_number || !home_address || !city || !state || !zip_code || !animal_id) {
         return res.status(400).json({ error: 'All fields are required.' });
     }
 
