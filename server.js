@@ -56,6 +56,18 @@ app.post('/api/adoptions', (req, res) => {
         return res.status(400).json({ error: 'All fields are required.' });
     }
 
+    db.run(
+        sql,
+        [name, email, phone_number, home_address, city, state, zip_code, animal_id],
+        function(err) {
+            if (err) {
+                console.error('Error inserting adoption application:', err.message);
+                return res.status(500).json({ error: 'Database error.' });
+            }
+
+            res.status(201).json({ message: 'Adoption application submitted successfully!', adopter_id: this.lastID, animal_id });
+    });
+
     // check if animal is available for adoption
     db.get(
         'SELECT status FROM animals WHERE id = ?',
