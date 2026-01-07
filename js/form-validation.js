@@ -53,6 +53,14 @@ document.addEventListener("DOMContentLoaded", function() {
             displayError(animalSelect, "Please select an animal.");
             isValid = false;
         }
+
+        // validate Zip Code
+        const zipInput = document.getElementById("zip_code");
+        const zipPattern = /^\d{5}(-\d{4})?$/;
+        if (!zipPattern.test(zipInput.value)) {
+            displayError(zipInput, "Please enter a valid zip code.");
+            isValid = false;
+        }
         
         // Stop here if validation failed
         if (!isValid) return;
