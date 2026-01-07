@@ -35,12 +35,15 @@ const db = new sqlite3.Database(dbPath, (err) => {
 
 // console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'));
 
+// homepage
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // test route
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
 
-    // res.json({ message: 'Welcome to the Second Chance Paws API!' });
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.json({ message: 'Welcome to the Second Chance Paws API!' });
 });
 
 // adoption endpoint
