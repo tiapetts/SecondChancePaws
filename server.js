@@ -6,7 +6,7 @@ const express = require('express');
 const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
-const dbPath = path.join(__dirname, 'db', 'second_chance_paws.db');
+const dbPath = path.join(__dirname, 'second_chance_paws.db');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
