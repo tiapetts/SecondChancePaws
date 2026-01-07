@@ -57,11 +57,11 @@ document.addEventListener("DOMContentLoaded", function() {
             name,
             email,
             phone,
-            address: document.getElementById("home_address"),
+            address: homeAddressInput.value,
             city: document.getElementById("city"),
             state: document.getElementById("state"),
-            zip: document.getElementById("zip_code"),
-            animal
+            zip: zipInput.value,
+            animal: animalSelect.value
           });
 
           const payload = {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
             city: document.getElementById("city").value.trim(),
             state: document.getElementById("state").value.trim(),
             zip: document.getElementById("zip_code").value.trim(),
-            animal_id: document.getElementById("animal").value
+            animal_id: Number(selectedAnimalId)
           };
           
           console.log("Submitting payload:", payload);

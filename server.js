@@ -39,6 +39,9 @@ app.get('/', (req, res) => {
 
 // adoption endpoint
 app.post('/api/adoptions', (req, res) => {
+
+    console.log('REQ BODY:', req.body);
+    
     const {
       name,
       email,
