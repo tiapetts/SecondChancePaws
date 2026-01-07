@@ -79,8 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
             animal: animalSelect.value
           });
 
-          form.addEventListener("submit", async function(event) {
-        event.preventDefault();
+        
         console.log("Submit Handler Fired");
 
           const payload = {
@@ -144,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
             form.reset();
         }
         
-    });
+    
     // Function to display error messages
     function displayError(inputElement, message) {
         const errorElement = document.createElement("div"); 
