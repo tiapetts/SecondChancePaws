@@ -28,7 +28,7 @@ const db = new sqlite3.Database(
     } 
 );
 
-console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'second_chance_paws.db'));
+console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'));
 
 
 // test route
