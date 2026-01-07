@@ -6,6 +6,7 @@ const express = require('express');
 const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const dbPath = path.join(__dirname, 'db', 'second_chance_paws.db');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,16 +18,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
 // database connection
-const db = new sqlite3.Database(
-    ('C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'),
-    (err) => {
-        if (err) {
-            console.error('Error connecting to database:', err.message);
-        } else {
-            console.log('Connected to the Second Chance Paws database.');
-        }  
-    } 
-);
+const db = new sqlite3.Database(dbPath, (err) => {
+    if (err) {
+        console.error('Error connecting to database:', err.message);
+    } else {
+        console.log('Connected to the Second Chance Paws database.');
+    }
+    // (err) => {
+    //     if (err) {
+    //         console.error('Error connecting to database:', err.message);
+    //     } else {
+    //         console.log('Connected to the Second Chance Paws database.');
+    //     }  
+    // } 
+});
 
 // console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'));
 
@@ -41,7 +46,7 @@ app.get('/', (req, res) => {
 app.post('/api/adoptions', (req, res) => {
 
     console.log('REQ BODY:', req.body);
-    
+
     const {
       name,
       email,
