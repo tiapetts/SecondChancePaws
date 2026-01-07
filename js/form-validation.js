@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!isValid) return;
 
         // Ready for backend submission
-        alert("Application submitted successfully!");
+        // alert("Application submitted successfully!");
 
         console.log({
             name,
