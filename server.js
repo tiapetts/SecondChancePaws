@@ -39,7 +39,8 @@ const db = new sqlite3.Database(dbPath, (err) => {
 // test route
 app.get('/', (req, res) => {
 
-    res.json({ message: 'Welcome to the Second Chance Paws API!' });
+    // res.json({ message: 'Welcome to the Second Chance Paws API!' });
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // adoption endpoint
