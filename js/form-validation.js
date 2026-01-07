@@ -111,6 +111,12 @@ document.addEventListener("DOMContentLoaded", function() {
             } catch (error) {
                 console.error("Error during fetch:", error);
             }
+
+            // If all validations pass, allow form submission
+        if (isValid) {
+            alert("Application submitted successfully!");
+            form.reset();
+        }
         });
         //             // 
         //             name: name.value,
@@ -137,11 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // }
 
         // form.reset();
-        // If all validations pass, allow form submission
-        if (isValid) {
-            alert("Application submitted successfully!");
-            form.reset();
-        }
+        
         
     
     // Function to display error messages
