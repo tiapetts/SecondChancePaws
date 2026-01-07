@@ -92,43 +92,43 @@ document.addEventListener("DOMContentLoaded", function() {
           
           console.log("Submitting payload:", payload);
 
-        // try {
-        //     const response = await fetch("/api/adoptions", {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json"
-        //         },
-        //         body: JSON.stringify({
-        //             // 
-        //             name: name.value,
-        //             email: email.value,
-        //             phone: phone.value,
-        //             address: document.getElementById("home_address").value,
-        //             city: document.getElementById("city").value,
-        //             state: document.getElementById("state").value,
-        //             zip: document.getElementById("zip_code").value,
-        //             animal_id: animal.value
-        //         })
-        //     });
+        try {
+            const response = await fetch("/api/adoptions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // 
+                    name: name.value,
+                    email: email.value,
+                    phone: phone.value,
+                    address: document.getElementById("home_address").value,
+                    city: document.getElementById("city").value,
+                    state: document.getElementById("state").value,
+                    zip: document.getElementById("zip_code").value,
+                    animal_id: animal.value
+                })
+            });
 
-        //     const result = await response.json();
+            const result = await response.json();
 
-        //     if (response.ok) {
-        //         alert(result.message);
-        //     } else {
-        //         alert("Error: " + result.error);
-        //     }
-        // } catch (error) {
-        //     alert("An unexpected error occurred. Please try again later.");
-        //     console.error("Error submitting form:", error);
-        // }
+            if (response.ok) {
+                alert(result.message);
+            } else {
+                alert("Error: " + result.error);
+            }
+        } catch (error) {
+            alert("An unexpected error occurred. Please try again later.");
+            console.error("Error submitting form:", error);
+        }
 
-        form.reset();
+        // form.reset();
         // If all validations pass, allow form submission
-        // if (isValid) {
-        //     alert("Application submitted successfully!");
-        //     form.reset();
-        // }
+        if (isValid) {
+            alert("Application submitted successfully!");
+            form.reset();
+        }
         
     });
     // Function to display error messages
