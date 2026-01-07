@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname)));
 
 // database connection
 const db = new sqlite3.Database(
-    path.join(__dirname, 'C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'),
+    ('C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'),
     (err) => {
         if (err) {
             console.error('Error connecting to database:', err.message);
@@ -28,7 +28,7 @@ const db = new sqlite3.Database(
     } 
 );
 
-console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'));
+// console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'));
 
 
 // test route
