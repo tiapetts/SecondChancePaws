@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname)));
 
 // database connection
 const db = new sqlite3.Database(
-    path.join(__dirname, 'second_chance_paws.db'),
+    path.join(__dirname, 'second_chance_paws.sqbpro'),
     (err) => {
         if (err) {
             console.error('Error connecting to database:', err.message);
@@ -28,7 +28,7 @@ const db = new sqlite3.Database(
     } 
 );
 
-console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'second_chance_paws.db'));
+console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'second_chance_paws.sqbpro'));
 
 
 // test route
