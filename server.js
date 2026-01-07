@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public', 'index.html')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // database connection
 const db = new sqlite3.Database(dbPath, (err) => {
