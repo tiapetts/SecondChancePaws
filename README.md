@@ -40,3 +40,19 @@ _____________________________________________________________________
  integration is ongoing.
 _____________________________________________________________________
 
+## Running the Project Locally
+
+1. Install dependencies:
+   npm install
+
+2. Start the server:
+   node server.js
+
+3. Open in browser:
+   http://localhost:3000/adopt.html
+
+   <br />
+
+   **This project uses SQLite for simplicity and ease of setup in a local development environment.
+   ***If the backend is not running, form submission will return a server error.
+
