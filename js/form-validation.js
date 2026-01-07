@@ -31,6 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
         }
 
+        // Validate Address
+        const homeAddressInput = document.getElementById("home_address");
+        if (homeAddressInput.value.trim() === "") {
+            displayError(homeAddressInput, "Please enter your home address.");
+            isValid = false;
+        }
+
         // Validate Phone Number
         const phoneInput = document.getElementById("phone");
         const phonePattern = /^\d{10}$/; 
