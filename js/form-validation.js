@@ -79,6 +79,10 @@ document.addEventListener("DOMContentLoaded", function() {
             animal: animalSelect.value
           });
 
+          form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        console.log("Submit Handler Fired");
+
           const payload = {
             name: document.getElementById("name").value.trim(),
             email: document.getElementById("email").value.trim(),
@@ -93,35 +97,45 @@ document.addEventListener("DOMContentLoaded", function() {
           console.log("Submitting payload:", payload);
 
         try {
-            const response = await fetch("/api/adoptions", {
+            const res = await fetch("/api/adoptions", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
-                    // 
-                    name: name.value,
-                    email: email.value,
-                    phone: phone.value,
-                    address: document.getElementById("home_address").value,
-                    city: document.getElementById("city").value,
-                    state: document.getElementById("state").value,
-                    zip: document.getElementById("zip_code").value,
-                    animal_id: animal.value
-                })
-            });
+                body: JSON.stringify(payload) });
 
-            const result = await response.json();
+                console.log("Fetch sent. Awaiting response...");
 
-            if (response.ok) {
-                alert(result.message);
-            } else {
-                alert("Error: " + result.error);
+                const data = await res.json();
+                console.log("Response received:", data);
+
+            } catch (error) {
+                console.error("Error during fetch:", error);
             }
-        } catch (error) {
-            alert("An unexpected error occurred. Please try again later.");
-            console.error("Error submitting form:", error);
-        }
+        });
+        //             // 
+        //             name: name.value,
+        //             email: email.value,
+        //             phone: phone.value,
+        //             address: document.getElementById("home_address").value,
+        //             city: document.getElementById("city").value,
+        //             state: document.getElementById("state").value,
+        //             zip: document.getElementById("zip_code").value,
+        //             animal_id: animal.value
+        //         })
+        //     });
+
+        //     const result = await response.json();
+
+        //     if (response.ok) {
+        //         alert(result.message);
+        //     } else {
+        //         alert("Error: " + result.error);
+        //     }
+        // } catch (error) {
+        //     alert("An unexpected error occurred. Please try again later.");
+        //     console.error("Error submitting form:", error);
+        // }
 
         // form.reset();
         // If all validations pass, allow form submission
