@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
             city: document.getElementById("city").value.trim(),
             state: document.getElementById("state").value.trim(),
             zip: document.getElementById("zip_code").value.trim(),
-            animal_id: Number(selectedAnimalId)
+            animal_id: document.getElementById("animal").value
           };
           
           console.log("Submitting payload:", payload);
