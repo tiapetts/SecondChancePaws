@@ -66,6 +66,22 @@ app.get('/api', (req, res) => {
     res.json({ message: 'Welcome to the Second Chance Paws API!' });
 });
 
+// get all available animals for dropdowns
+app.get('/api/animals', (req, res) => {
+
+    const sql = `SELECT id, name, species, status FROM animals WHERE status = 'available' ORDER BY name`;
+
+    db.all(sql, [], (err, rows) => {
+        if (err) {
+            console.error('Error fetching animals:', err.message);
+            return res.status(500).json({ error: 'Database error.' });
+        }
+
+        res.json(rows);
+    });
+
+});
+
 // adoption endpoint
 app.post('/api/adoptions', (req, res) => {
 
