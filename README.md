@@ -1,7 +1,5 @@
 # SecondChancePaws
 <h1>Take a look</h1>
-<li><a href="https://tiapetts.github.io/SecondChancePaws/public/html">Second Chance Paws Website</a></li>
-
 <br />
 Second Chance Paws is a full-stack web application designed to manage animal adoptions for a fictional rescue organization. The system allows prospective adopters to submit adoption applications while enforcing backend business rules that ensure data integrity, prevent duplicate adoptions, and maintain consistent application state across sessions.
 
