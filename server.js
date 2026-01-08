@@ -73,7 +73,7 @@ app.get('/api/animals', (req, res) => {
       animals.id, 
       animals.name, 
       species.name AS species, 
-      animals.age,
+      animals.age
       FROM animals
       JOIN species ON animals.species_id = species.id
       WHERE animals.status = 'available'
