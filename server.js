@@ -39,7 +39,7 @@ const fs = require('fs');
 
 db.serialize(() => {
   const schema = fs.readFileSync(
-    path.join(__dirname, 'second-chance-paws-db-schema.sql'),
+    path.join(__dirname, 'db', 'second-chance-paws-db-schema.sql'),
     'utf8'
   );
   console.log('DB SCHEMA:\n', schema);
