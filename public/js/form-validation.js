@@ -2,7 +2,31 @@
 // January 4th, 2026
 // Form Validation Script for Adoption Form
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", loadAnimals, function() {
+
+    async function loadAnimals() {
+        try {
+            const response = await fetch("/api/animals");
+
+            if (!response.ok) {
+                throw new Error('Failed to load animals');
+            }
+
+            const animals = await response.json();
+            const select = document.getElementById('animalSelect');
+
+            animals.forEach(animal => {
+                const option = document.createElement('option');
+                option.value = animal.id;
+                option.textContent = `${animal.name} (${animal.species})`;
+                select.appendChild(option);
+            });
+        } catch (error) {
+            console.error('Error loading animals:', error);
+            alert('Could not load animals at this time. Please try again later.');
+        }
+    }
+    
     const form = document.getElementById("adoption-form"); 
 
 
