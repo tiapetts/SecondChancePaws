@@ -34,6 +34,25 @@ const db = new sqlite3.Database(dbPath, (err) => {
     // } 
 });
 
+// Debugging: Log actual DB file path
+const fs = require('fs');
+
+db.serialize(() => {
+  const schema = fs.readFileSync(
+    path.join(__dirname, 'db', 'second-chance-paws-schema.sql'),
+    'utf8'
+  );
+  console.log('DB SCHEMA:\n', schema);
+
+  db.exec(schema, (err) => {
+    if (err) {
+      console.error('Error executing schema:', err.message);
+    } else {
+      console.log('Database schema executed successfully.');
+    }
+  });
+}); 
+
 // console.log('ACTUAL DB FILE:', path.resolve(__dirname, 'C:/Users/curts/OneDrive/Desktop/DB/Second_Chance_Paws/second_chance_paws.db'));
 
 // homepage
