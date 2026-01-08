@@ -69,7 +69,15 @@ app.get('/api', (req, res) => {
 // get all available animals for dropdowns
 app.get('/api/animals', (req, res) => {
 
-    const sql = `SELECT id, name, species, status FROM animals WHERE status = 'available' ORDER BY name`;
+    const sql = `SELECT 
+      animals.id, 
+      animals.name, 
+      species.name AS species, 
+      animals.age,
+      FROM animals
+      JOIN species ON animals.species_id = species.id
+      WHERE animals.status = 'available'
+      ORDER BY animals.name ASC`;
 
     db.all(sql, [], (err, rows) => {
         if (err) {

@@ -2,7 +2,9 @@
 // January 4th, 2026
 // Form Validation Script for Adoption Form
 
-document.addEventListener("DOMContentLoaded", loadAnimals, function() {
+document.addEventListener("DOMContentLoaded", () =>  {
+
+    loadAnimals();
 
     async function loadAnimals() {
         try {
@@ -13,21 +15,34 @@ document.addEventListener("DOMContentLoaded", loadAnimals, function() {
             }
 
             const animals = await response.json();
-            const select = document.getElementById('animalSelect');
+            const select = document.getElementById('animal_id');
+
+            if (!select) {
+                console.error('Animal select element not found');
+                return;
+            }
+
+            select.innerHTML = '<option value="">Select an animal</option>';
 
             animals.forEach(animal => {
                 const option = document.createElement('option');
                 option.value = animal.id;
-                option.textContent = `${animal.name} (${animal.species})`;
+                option.textContent = `${animal.name} — ${animal.species}, ${animal.age} yrs`;
                 select.appendChild(option);
             });
+
         } catch (error) {
             console.error('Error loading animals:', error);
             alert('Could not load animals at this time. Please try again later.');
         }
+
     }
-    
-    const form = document.getElementById("adoption-form"); 
+
+    const form = document.getElementById("adoption-form");
+    if (!form) {
+        console.error("Adoption form not found!");
+        return;
+    } 
 
 
     form.addEventListener("submit", async function(event) {
@@ -142,33 +157,6 @@ document.addEventListener("DOMContentLoaded", loadAnimals, function() {
             form.reset();
         }
         });
-        //             // 
-        //             name: name.value,
-        //             email: email.value,
-        //             phone: phone.value,
-        //             address: document.getElementById("home_address").value,
-        //             city: document.getElementById("city").value,
-        //             state: document.getElementById("state").value,
-        //             zip: document.getElementById("zip_code").value,
-        //             animal_id: animal.value
-        //         })
-        //     });
-
-        //     const result = await response.json();
-
-        //     if (response.ok) {
-        //         alert(result.message);
-        //     } else {
-        //         alert("Error: " + result.error);
-        //     }
-        // } catch (error) {
-        //     alert("An unexpected error occurred. Please try again later.");
-        //     console.error("Error submitting form:", error);
-        // }
-
-        // form.reset();
-        
-        
     
     // Function to display error messages
     function displayError(inputElement, message) {
