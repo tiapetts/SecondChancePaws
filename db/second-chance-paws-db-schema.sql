@@ -52,8 +52,8 @@ CREATE TABLE IF NOT EXISTS stories (
 
     FOREIGN KEY (animal_id) REFERENCES animals(id)
 );
-CREATE INDEX idx_adoptions_adopter ON adoptions(adopter_id);
-CREATE INDEX idx_adoptions_animal ON adoptions(animal_id);
-CREATE INDEX idx_images_animal ON images(animal_id);
-CREATE INDEX idx_stories_animal ON stories(animal_id);
+CREATE INDEX IF NOT EXISTS idx_adoptions_adopter ON adoptions(adopter_id);
+CREATE INDEX IF NOT EXISTS idx_adoptions_animal ON adoptions(animal_id);
+CREATE INDEX IF NOT EXISTS idx_images_animal ON images(animal_id);
+CREATE INDEX IF NOT EXISTS idx_stories_animal ON stories(animal_id);
 COMMIT;
