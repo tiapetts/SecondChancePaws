@@ -23,6 +23,7 @@ const db = new sqlite3.Database(dbPath, (err) => {
         console.error('Error connecting to database:', err.message);
     } else {
         console.log('Connected to the Second Chance Paws database.');
+        console.log('DB PATH:', dbPath);
     }
     // (err) => {
     //     if (err) {
