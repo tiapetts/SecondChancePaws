@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
 
 
         // Validate Animal Selection
-        const animalSelect = document.getElementById("animal");
+        const animalSelect = document.getElementById("animal_id");
         if (animalSelect.value === "") {
             displayError(animalSelect, "Please select an animal.");
             isValid = false;
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
             city: document.getElementById("city").value.trim(),
             state: document.getElementById("state").value.trim(),
             zip: document.getElementById("zip_code").value.trim(),
-            animal_id: document.getElementById("animal").value
+            animal_id: document.getElementById("animal_id").value
           };
           
           console.log("Submitting payload:", payload);
