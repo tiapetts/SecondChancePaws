@@ -4,8 +4,6 @@
 
 document.addEventListener("DOMContentLoaded", () =>  {
 
-    loadAnimals();
-
     async function loadAnimals() {
         try {
             const response = await fetch("/api/animals");
@@ -150,6 +148,8 @@ document.addEventListener("DOMContentLoaded", () =>  {
             } catch (error) {
                 console.error("Error during fetch:", error);
             }
+            
+            loadAnimals();
 
             // If all validations pass, allow form submission
         if (isValid) {
