@@ -117,7 +117,7 @@ app.post('/api/adoptions', (req, res) => {
       (err, animal) => {
         if (err) {
           console.error(err);
-          return res.status(500).json({ error: 'Database error.' });
+          return res.status(500).json({ error: 'Database error selecting animal.' });
         }
   
         if (!animal || animal.status !== 'available') {
@@ -137,7 +137,7 @@ app.post('/api/adoptions', (req, res) => {
           function (err) {
             if (err) {
               console.error(err);
-              return res.status(500).json({ error: 'Database error.' });
+              return res.status(500).json({ error: 'Database error inserting Adopter.' });
             }
   
             const adopterId = this.lastID;
@@ -155,7 +155,7 @@ app.post('/api/adoptions', (req, res) => {
               function (err) {
                 if (err) {
                   console.error(err);
-                  return res.status(500).json({ error: 'Database error.' });
+                  return res.status(500).json({ error: 'Database error inserting Adoption.' });
                 }
   
                 // Update animal status
@@ -167,7 +167,7 @@ app.post('/api/adoptions', (req, res) => {
                   (err) => {
                     if (err) {
                       console.error(err);
-                      return res.status(500).json({ error: 'Database error.' });
+                      return res.status(500).json({ error: 'Database error updating animal status.' });
                     }
   
                     // Final response (ONE TIME)
@@ -189,7 +189,7 @@ app.post('/api/adoptions', (req, res) => {
     
 
 
-console.log('DB PATH:', path.join(__dirname, 'second_chance_paws.db'));
+// console.log('DB PATH:', path.join(__dirname, 'second_chance_paws.db'));
 
 // Start server
 app.listen(PORT, () => {
