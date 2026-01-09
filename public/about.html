@@ -9,9 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- global styles -->
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- page specific styles -->
-    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="css/about.css" />
 </head>
 
 <body>
@@ -50,74 +50,78 @@
 
         </header>
 
-        <section class="about-section">
-            <h2>Our Mission</h2>
-            <p>Second Chance Paws is dedicated to giving shelter animals a second chance at life by connecting them with
-                loving families.</p>
-        </section>
+        <div class="grid-container">
+            <section class="about-section grid-item">
+                <h2>Our Mission</h2>
+                <p>Second Chance Paws is dedicated to giving shelter animals a second chance at life by connecting them
+                    with
+                    loving families.</p>
+            </section>
 
-        <section class="about-section-values">
-            <h2>Our Values</h2>
-            <ul>
-                <li>Compassion for all animals</li>
-                <li>Respect for every living being</li>
-                <li>Commitment to community support</li>
-            </ul>
+            <section class="about-section-values grid-item">
+                <h2>Our Values</h2>
+                <ul>
+                    <li>Compassion for all animals</li>
+                    <li>Respect for every living being</li>
+                    <li>Commitment to community support</li>
+                </ul>
 
-        </section>
+            </section>
 
-        <section class="why-this-project">
-            <h2>Why Second Chance Paws Exists</h2>
-            <p>
-                This project was built to explore full-stack web development concepts while supporting a cause centered
-                on compassion, responsibility, and real world impact.
-            </p>
-        </section>
+            <section class="why-this-project grid-item">
+                <h2>Why Second Chance Paws Exists</h2>
+                <p>
+                    This project was built to explore full-stack web development concepts while supporting a cause
+                    centered
+                    on compassion, responsibility, and real world impact.
+                </p>
+            </section>
 
-        <section class="technical-details">
-            <details>
-                <summary>Technical Overview</summary>
+            <section class="technical-details grid-item">
+                <details>
+                    <summary>Technical Overview</summary>
 
-                <div class="details-content">
-                    <h3>Database Design</h3>
-                    <p>
-                        Second Chance Paws uses a normalized relational database designed to model real-world adoption
-                        workflows.
-                    </p>
+                    <div class="details-content">
+                        <h3>Database Design</h3>
+                        <p>
+                            Second Chance Paws uses a normalized relational database designed to model real-world
+                            adoption
+                            workflows.
+                        </p>
 
-                    <ul>
-                        <li><strong>animals</strong> - core entity representing adoptable animals</li>
-                        <li><strong>species</strong> - normalized lookup table for animal types</li>
-                        <li><strong>adopters</strong> - adopter contact information</li>
-                        <li><strong>adoptions</strong> - junction table tracking adoption events</li>
-                        <li><strong>images</strong> - multiple images per animal</li>
-                        <li><strong>stories</strong> - post-adoption narratives</li>
-                    </ul>
+                        <ul>
+                            <li><strong>animals</strong> - core entity representing adoptable animals</li>
+                            <li><strong>species</strong> - normalized lookup table for animal types</li>
+                            <li><strong>adopters</strong> - adopter contact information</li>
+                            <li><strong>adoptions</strong> - junction table tracking adoption events</li>
+                            <li><strong>images</strong> - multiple images per animal</li>
+                            <li><strong>stories</strong> - post-adoption narratives</li>
+                        </ul>
 
-                    <h3>Schema</h3>
-                    <p>
-                        The database enforces relationships through foreign keys and
-                        uses timestamps to track lifecycle events.
-                    </p>
+                        <h3>Schema</h3>
+                        <p>
+                            The database enforces relationships through foreign keys and
+                            uses timestamps to track lifecycle events.
+                        </p>
 
-                    <a
-                        href="https://github.com/tiapetts/SecondChancePaws/blob/main/db/second-chance-paws-db-schema.sql">SQL
-                        Schema</a>
-                    <br />
-                    <img src="/img/db-erd.png"
-                        alt="Database schema diagram showing animals, adoptions, adopters, species, images, and stories"
-                        class="schema-image" />
+                        <a
+                            href="https://github.com/tiapetts/SecondChancePaws/blob/main/db/second-chance-paws-db-schema.sql">SQL
+                            Schema</a>
+                        <br />
+                        <img src="/img/db-erd.png"
+                            alt="Database schema diagram showing animals, adoptions, adopters, species, images, and stories"
+                            class="schema-image" />
 
-                    <h3>Planned Future Enhancements</h3>
-                    <ul>
-                        <li>User authentication for staff</li>
-                        <li>Admin dashboard for managing adoptions</li>
-                        <li>API layer for dynamic frontend integration</li>
-                    </ul>
-                </div>
-            </details>
-        </section>
-
+                        <h3>Planned Future Enhancements</h3>
+                        <ul>
+                            <li>User authentication for staff</li>
+                            <li>Admin dashboard for managing adoptions</li>
+                            <li>API layer for dynamic frontend integration</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+        </div>
     </main>
 
     <footer>
